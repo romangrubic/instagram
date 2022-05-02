@@ -8,17 +8,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body class="bg-gray-100">
-    <nav class="p-6 bg-white flex justify-between">
+<body class="bg-gray-200">
+    <nav class="p-6 bg-white flex justify-between mb-6">
         <ul class="flex items-center">
             <li>
-                <a href="">Home</a>
+                <a href=""class="p-3">Home</a>
             </li>
             <li>
-                <a href="">Profile</a>
+                <a href=""class="p-3">Profile</a>
             </li>
             <li>
-                <a href="">Posts</a>
+                <a href=""class="p-3">Posts</a>
+            </li>
+        </ul>
+
+        <ul class="flex items-center">
+            <li>
+                <a href=""class="p-3">Name</a>
+            </li>
+            <li>
+                <a href=""class="p-3">Login</a>
+            </li>
+            <li>
+                <a href="{{ route('register') }}"class="p-3">Register</a>
+            </li>
+            <li>
+                <a href=""class="p-3">Logout</a>
             </li>
         </ul>
     </nav>
