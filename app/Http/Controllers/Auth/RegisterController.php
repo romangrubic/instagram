@@ -25,8 +25,18 @@ class RegisterController extends Controller
         ]);
 
         // Store
+        User::create([
+            'name'=>$request->name,
+            'username'=>$request->username,
+            'email'=>$request->email,
+            'password'=>Hash::make($request->password),
+        ]);
+
+        // Sign in auth helper function or Auth facade
+        auth()->attempt($request->only('email','password'));
 
 
-        // Sign in
+        // Redirect
+        return redirect()->route('dashboard');
     }
 }
